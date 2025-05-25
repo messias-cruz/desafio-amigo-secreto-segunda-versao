@@ -40,7 +40,7 @@ Esta é a segunda versão do projeto "Amigo Secreto", com melhorias significativ
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 </div>  
 
-🔄 Diferenças em relação à primeira versão
+## 🔄 Diferenças em relação à primeira versão
 | Recurso                             | Primeira Versão | Segunda Versão                 |
 | ----------------------------------- | --------------- | ------------------------------ |
 | Adição de nomes                     | ✅               | ✅ (com validação e formatação) |
