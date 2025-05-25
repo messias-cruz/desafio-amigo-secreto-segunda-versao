@@ -1,0 +1,226 @@
+:root {
+    --color-primary: #0f0c29;
+    --color-secondary: #bab3ff;
+    --color-tertiary: #9f7ceb;
+    --color-quaternary: #9165f0;
+    --color-button: #ff5edc;         /* Rosa neon – destaca bem no fundo escuro */
+    --color-button-hover: #e14bcb;   /* Tom mais escuro para o hover */
+    --color-text: #e0e0e0;           /* Cinza claro – leitura confortável no fundo escuro */
+    --color-white: #ffffff;          /* Mantém o branco puro */
+    --color-button-hover-dark: #c439b8;
+
+    /* Extras úteis se quiser expandir: */
+    --color-bg-dark: #0f0c29;          /* fundo roxo-azulado escuro */
+    --color-accent: #ff00ff;           /* rosa neon */
+    --color-green-neon: #39ff14;       /* verde limão */
+}
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* fundo escuro roxo-azulado */
+    background-size: 400% 400%;
+    animation: neonBackground 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes neonBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+/* Seção de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Contêineres de entrada e botão */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    gap: 5px;    
+}
+
+#button-new-game {
+    display: none; /* Inicialmente o botão 'Novo Jogo' está oculto */
+    margin-top: 20px;
+    background-color: var(--color-green-neon);
+    color: var(--color-primary)
+  }
+
+  #button-new-game:hover {
+    background-color: #59ca5e; /* Cor quando passa o mouse */
+  }
+
+/* Estilos de entrada de texto */
+.input-title {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    font-family: "Merriweather", serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de botão */
+button {
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+    border-radius: 0 25px 25px 0;
+}
+
+.button-add:hover {
+    background-color: var(--color-quaternary);
+}
+
+/* Estilo do botão de remoção */
+.button-remove {
+    background-color: var(--color-button-hover);
+    color: white;
+    border: none;
+    padding: 2px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 10px; /* Adicionando borda arredondada */
+  }
+  
+  /* Efeito ao passar o mouse sobre o botão */
+  .button-remove:hover {
+    background-color: var(--color-button-hover-dark);
+}
+
+/* Estilo do botão de limpar lista */
+.button-clear {
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid #000;
+    border-radius: 25px;
+}
+
+.button-clear:hover {
+    background-color: var(--color-quaternary);
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-primary);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.result-list {
+    margin-top: 15px;
+    color: var(--color-primary);
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botão de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-primary);
+    background-color: var(--color-button);
+    font-size: 16px;
+}
+
+.button-draw img {
+    margin-right: 40px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
