@@ -1,6 +1,6 @@
-# 🎁 Amigo Secreto
+# 🎁 Amigo Secreto - 2ª versão
 
-<img src="./assets/amigo-secreto.png">
+<img src="./assets/presentes.png">
 
 ## 📋 Descrição do Projeto
 
